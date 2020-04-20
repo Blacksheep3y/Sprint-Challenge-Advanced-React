@@ -21,13 +21,13 @@ function changeMode () {
 }
  return (
       <div className="App-container">
-        <h1 data-testid="titleApp"className="App-title">Welcome World Cup Players!</h1>
-        <button onClick={changeMode}> Dark Mode </button>
+        <h1 data-testid="titleApp" className="App-title">Welcome World Cup Players!</h1>
+        <button data-testid="buttonDarkMode" onClick={changeMode}> Dark Mode </button>
         {players.map((element, index) => (
-          <div key={index}>
-            <h2>{element.name}</h2>
-            <h2>{element.country}</h2>
-            <h2>{element.searches}</h2>
+          <div data-testid="arraySTUFF" key={index}>
+            <h2 data-testid="arraySTUFF_NAME">{element.name}</h2>
+            <h2 data-testid="arraySTUFF_COUNTRY">{element.country}</h2>
+            <h2 data-testid="arraySTUFF_SEARCHES">{element.searches}</h2>
           </div>
           ))}
       </div>
